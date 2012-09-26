@@ -25,7 +25,7 @@ link_directories(${OPENBABEL2_LIBRARY_DIR} ${QTTEST_LIBRARY_DIRS} ${BOOST_LIBRAR
 target_link_libraries(charges++ ${OPENBABEL2_LIBRARIES} "-Wl,-Bstatic" ${Boost_LIBRARIES} "-Wl,-Bdynamic" )
 
 #něco jako unit_testy
-#find_package(Qt4)
+find_package(Qt4)
 if (${QT_FOUND})
   SET(QT_USE_QTTEST TRUE)
   include(${QT_USE_FILE})
