@@ -67,6 +67,11 @@ istream& operator>>(istream& in, EEMparams& params) {
       lineno++;
       while(in.good()) {
 	std::getline(in, line);
+	//skip empty lines
+	if (line.length() == 0) {
+	  continue;
+	}
+	
 	tokens = tokenize(line);
 
 	if(tokens.size() != 4) {
